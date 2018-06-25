@@ -3,12 +3,14 @@ This Python script queries the Cisco WLC and returns the connection statistics f
 
 This Python script will look through the AP names that contain the site ID that you specify at the command line.  This was written for a site that uses the naming scheme of SiteID-Floor-APName to name the access points so it looks for all instances of the AP name of the controller specieified at runtime and then queries them to return the SNR, RSSI, and current speed rate for each MAC address conencted to the access point.  It seperates the output by the 2.4 & 5 Ghz bands.
 
-Command syntax: python wifi_site_stats.py -i <WLC IP Address> -s <Site ID or AP name> -u <username) -p <password>
+````Python
+Command syntax: python wifi_site_stats.py -i <WLC IP Address> -s <Site ID or AP name> -u <username> -p <password>
 
 
-Example Output:
+Example Output: 
 
 Use the channel widths on this chart to get the actual speed: http://mcsindex.com/
+
 199-2W-AP04       Channel Width.............................. 80 Mhz
 199-1W-AP03       Channel Width.............................. 20 Mhz
 199-2W-AP08       Channel Width.............................. 80 Mhz
@@ -26,3 +28,4 @@ Current Rate..................................... m8 ss1
 Current Rate..................................... m8 ss2
       Radio Signal Strength Indicator............ -66 dBm
       Signal to Noise Ratio...................... 30 dB
+  ````
